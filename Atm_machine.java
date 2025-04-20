@@ -1,4 +1,3 @@
-import java.util.*;
 import java.util.Scanner;
  class Atm{
     float balance;
@@ -9,22 +8,22 @@ import java.util.Scanner;
     }
     
     public void checkpin(){
-        System.err.println("Enter your pin:");
+        System.out.println("Enter your pin:");
         Scanner sc =new Scanner(System.in);
 int enteredpin=sc.nextInt();
 if(enteredpin==PIN){
     menu();
 }else{
-    System.err.println("Enter a valid PIN");
+    System.out.println("Enter a valid PIN");
 }
     }
 
     public void menu(){
-    System.err.println("Enter Your Choice:");
-    System.err.println("1. Check Account Balance");
-    System.err.println("2. Withdraw Money");
-    System.err.println("3. Deposite Money");
-    System.err.println("4. EXIT");
+    System.out.println("Enter Your Choice:");
+    System.out.println("1. Check Account Balance");
+    System.out.println("2. Withdraw Money");
+    System.out.println("3. Deposite Money");
+    System.out.println("4. EXIT");
 
     Scanner sc=new Scanner(System.in);
     int opt=sc.nextInt();
@@ -41,7 +40,7 @@ if(enteredpin==PIN){
             case 4:
                 break;
             default:
-                System.err.println("Enter a Valid Choice");
+                System.out.println("Enter a Valid Choice");
                 menu();
         }
     }
@@ -56,7 +55,7 @@ if(enteredpin==PIN){
         Scanner sc=new Scanner(System.in);
         float amount=sc.nextFloat();
         balance=balance+amount;
-        System.err.println("Money Deposited Successfully");
+        System.out.println("Money Deposited Successfully");
     }
 
     private void withdrawMoney() {
@@ -75,7 +74,7 @@ if(enteredpin==PIN){
 
 public class Atm_machine{
     public static void main(String[] args) {
-        Atm user=new Atm(67890);
-        user.checkpin();
+       Atm user=new Atm(98076);
+       user.checkpin();
     }
 }
